@@ -1,0 +1,124 @@
+/* General page setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Calculator container */
+.container {
+    background-color: #ffffff; /* White background for the calculator */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Light shadow for soft appearance */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 320px;
+}
+
+/* Display screen */
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 2.5em;
+    text-align: right;
+    background-color: #ffffff; /* Light gray background for the display */
+    color: #000000; /* Dark text for readability */
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button container */
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+}
+
+/* Button styling */
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+    background-color: f4f4f4; /* Purple background for number and operation buttons */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #000000; /* Slightly brighter purple on hover */
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+button:active {
+    background-color: #000000; /* Darker purple on click */
+    transform: scale(0.95);
+}
+
+/* Special operation button styles (Same purple for all) */
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16) {
+    background-color: #00ff8c; /* Purple background for operation buttons */
+}
+
+button:nth-child(4):hover,
+button:nth-child(8):hover,
+button:nth-child(12):hover,
+button:nth-child(16):hover {
+    background-color: #00ff8c;
+}
+
+button:nth-child(4):active,
+button:nth-child(8):active,
+button:nth-child(12):active,
+button:nth-child(16):active {
+    background-color: #00ff8c;
+}
+
+/* Equal button styling */
+button:last-child {
+    background-color: #00ff8c;
+    grid-column: span 2; /* Span across two columns */
+}
+
+button:last-child:hover {
+    background-color: #00ff8c;
+}
+
+button:last-child:active {
+    background-color: #00ff8c;
+}
+
+/* Clear button styling */
+button:nth-child(17) {
+    background-color: #00ff8c; /* Pink background for clear button */
+    grid-column: span 2; /* Span across two columns */
+}
+
+button:nth-child(17):hover {
+    background-color: #00ff8c;
+
+button:nth-child(17):active {
+    background-color: #00ff8c;
+}
